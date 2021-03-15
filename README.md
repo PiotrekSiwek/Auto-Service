@@ -12,5 +12,5 @@ Includes carousels, online offer creator, controlled form and weather app.
 
 
 ## Installation
-npm i,
-npm start
+- npm i,
+- npm start
