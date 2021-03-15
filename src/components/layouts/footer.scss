@@ -1,0 +1,61 @@
+.footer{
+  color: white;
+  height: 60px;
+  background-color: #100f0f;
+
+  &__box{
+    font-size: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+  }
+}
+
+.company-data{
+  font-family: "Open Sans", sans-serif;
+}
+
+.company-data > span{
+  color: red;
+}
+
+.company-phone{
+  transform: scale(1.2);
+}
+
+.fa-phone-alt{
+  color: orangered;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.fa-facebook,
+.fa-twitter,{
+  color: #144280;
+  font-size: 25px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+@media (max-width:680px) {
+  .fa-facebook,
+  .fa-twitter,{
+  display: none;
+  }
+}
+
+@media (max-width:450px) {
+  .company-address{
+    display: none;
+  }
+  .footer{
+    &__box{
+      justify-content: center;
+    }
+  }
+  .company-hours,
+  .company-phone{
+    margin: 0 30px;
+  }
+}

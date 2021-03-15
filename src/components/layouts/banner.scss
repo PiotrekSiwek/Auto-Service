@@ -1,0 +1,171 @@
+.banner-box {
+  height: calc(100vh - 40px);
+  width: 100%;
+  color: white;
+  background: url("../../images/car-1458721_banner.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+  }
+}
+
+.banner-wrap {
+  border-radius: 9px;
+  padding: 20px;
+  text-align: center;
+  width: 50%;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 70px;
+  margin-top: 30px;
+}
+
+.banner__title {
+  font-size: 60px;
+  font-family: 'Roboto Slab', serif;
+  color: white;
+}
+
+.banner__text {
+  font-size: 40px;
+  font-family: 'Roboto Slab', serif;
+  color: white;
+  margin-top: 60px;
+}
+
+.banner__btn {
+  margin-top: 50px;
+  padding: 10px 30px;
+  border-radius: 8px;
+  background: orangered;
+  color: white;
+  font-size: 25px;
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bolder;
+  cursor: pointer;
+  border: 2px solid #262525;
+  transition: 0.5s;
+
+  &:hover {
+    transform: scale(0.98);
+  }
+}
+
+.banner-message {
+  height: 40px;
+  background: #000000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .banner-icons {
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    font-size: 14px;
+    margin: 10px 40px;
+    cursor: pointer;
+
+    &:hover {
+      color: orangered;
+    }
+  }
+}
+
+.ico1:hover > .fa-tools {
+  transform: rotateY(180deg);
+  color: orangered;
+}
+
+.ico2:hover > .fa-car {
+  transform: rotateY(180deg);
+  color: orangered;
+}
+
+.ico3:hover > .fa-road {
+  transform: rotateY(180deg);
+  color: orangered;
+}
+
+.fa-road,
+.fa-tools,
+.fa-car {
+  color: white;
+  font-size: 25px;
+  transition: 1s;
+  margin-right: 10px;
+}
+
+@media (max-width: 1260px) {
+  .banner__title {
+    font-size: 50px;
+  }
+  .banner__text {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .banner-box {
+    height: 650px;
+    &::before {
+      height: 650px;
+    }
+  }
+  .banner-message {
+    flex-wrap: wrap;
+    height: 50px;
+    padding: 10px 0;
+  }
+  .banner__title {
+    font-size: 40px;
+  }
+  .banner__text {
+    font-size: 25px;
+  }
+  .banner__btn{
+    padding: 8px 15px;
+    font-size: 20px;
+  }
+  .link:nth-of-type(3){
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 620px) {
+  .banner-wrap {
+    margin: 0 auto;
+    width: 75%;
+  }
+  .banner-message {
+    flex-wrap: nowrap;
+    height: 120px;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .link{
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 370px) {
+  .banner-message {
+    .banner-icons {
+    font-size: 12px;
+    }
+  }
+}

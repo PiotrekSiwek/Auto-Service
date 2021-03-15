@@ -1,0 +1,79 @@
+.tires {
+  background-color: #000000;
+  padding-top: 60px;
+  border: 1px solid transparent;
+  padding-bottom: 40px;
+
+  &__title {
+    color: #ffffff;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  &__offer {
+    height: 450px;
+    background-color: #f6f6f6;
+    background-image: url("../../images/tires_tires.jpg");
+    width: 80%;
+    border-radius: 5px;
+    margin: 40px auto 0;
+    border: 1px solid black;
+    box-shadow: inset 0 3px 22px 2px #545454;
+    position: relative;
+
+    &::after{
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: #000000;
+      opacity: 0.4;
+      left:0;
+      border-radius: 5px;
+      position:absolute;
+      top:0;
+    }
+  }
+}
+
+.offer-title {
+  color: #ffffff;
+  text-align: center;
+  font-size: 23px;
+  margin-top: 40px;
+  position: relative;
+  z-index: 100;
+}
+
+.offer-box {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  position: relative;
+  z-index: 100;
+}
+
+@media (min-width: 1400px) {
+  .tires{
+    padding-top: 140px;
+    padding-bottom: 50px;
+    &__title{
+    padding-bottom: 60px;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .tires{
+    padding-top: 70px;
+    &__offer{
+      height: 700px;
+      width: 100%;
+    }
+  }
+  .offer-box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

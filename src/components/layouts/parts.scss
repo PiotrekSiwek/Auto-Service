@@ -1,0 +1,135 @@
+.parts {
+  color: white;
+  padding-top: 70px;
+  padding-bottom: 60px;
+
+  &__title {
+    font-size: 35px;
+    text-align: center;
+  }
+
+  &__box {
+    width: 90%;
+    height: 450px;
+    margin: 30px auto 0;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.column {
+  width: 28%;
+  background: #eaeaea;
+  margin: 0 20px;
+  object-fit: cover;
+  border-radius: 8px;
+  text-align: center;
+  transition: 0.5s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &__title {
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  &__pic {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+
+  &__text {
+    color: #433f3f;
+    margin: 10px 20px 0;
+    font-size: 13px;
+    font-family: Raleway, sans-serif;
+    line-height: 20px;
+    height: 100px;
+  }
+
+  &__button {
+    padding: 10px 15px;
+    outline: none;
+    color: white;
+    background: orangered;
+    font-size: 13px;
+    font-weight: bolder;
+    border: 1px solid #000000;
+    border-radius: 7px;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 0px 2px 15px -1px #000000;
+    margin-top: 30px;
+
+    &:hover {
+      transform: scale(0.95);
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .parts {
+    padding-bottom: 100px;
+
+    &__title {
+      margin-bottom: 65px;
+      margin-top: 80px;
+    }
+  }
+}
+
+@media (max-width: 1100px){
+  .parts{
+    &__box{
+      height: 550px;
+    }
+  }
+  .column {
+    &__button {
+      margin-top: 10px;
+    }
+    &__text{
+      height: 200px;
+    }
+    &__title{
+      height: 50px;
+    }
+  }
+}
+
+@media (max-width: 830px) {
+  .parts{
+    &__box{
+      min-height: 1450px;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  }
+  .column {
+    width: 100%;
+    margin-bottom: 25px;
+    &__text{
+      height: 100px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .parts{
+    &__box{
+      min-height: 1600px;
+    }
+  }
+  .column {
+    &__text{
+      height: 140px;
+    }
+  }
+}

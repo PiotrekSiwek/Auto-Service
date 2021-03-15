@@ -1,0 +1,37 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: black;
+  z-index: 1000;
+
+  &__box {
+    display: flex;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    padding: 20px;
+  }
+}
+
+.logo-link {
+  text-decoration: none;
+  font-size: 22px;
+  color: ghostwhite;
+  font-family: 'Roboto Slab', serif;
+  cursor: pointer;
+}
+
+.logo-text2 {
+  color: red;
+  font-family: 'Faster One', cursive;
+  font-size: 25px;
+}
+
+
+
+

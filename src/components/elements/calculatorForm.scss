@@ -1,0 +1,144 @@
+.form-box {
+  width: 100%;
+}
+
+.select {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120%;
+
+  &__label {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+
+  &__input {
+    width: 90%;
+    outline: none;
+    border: 2px solid #ffffff;
+    box-shadow: 0 3px 22px 2px #373535;
+    border-radius: 4px;
+  }
+}
+
+.form-summary {
+  height: 300px;
+  width: 30%;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 3px 10px 25px 3px #262525;
+  font-size: 26px;
+  font-family: 'Caveat', cursive;
+  font-weight:500;
+  padding-top: 25px;
+  text-align: center;
+  position: relative;
+
+  &__title{
+    margin-bottom: 30px;
+  }
+
+  & .configuration{
+    font-size: 24px;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+  }
+
+  & p{
+    font-size: 23px;
+  }
+
+  & p:last-of-type {
+    margin-top: 20px;
+    font-weight: 600;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  & .fa-phone-square{
+    color: green;
+    transform: rotateY(180deg);
+    cursor: pointer;
+    position: absolute;
+    bottom: 35px;
+    right: 15%;
+  }
+
+  & .mobile-number{
+    font-size: 16px;
+    padding: 5px;
+    background: green;
+    border-radius: 5px;
+    color: white;
+    position: absolute;
+    right: -50px;
+    animation: rotate-number 1s infinite linear;
+
+    &::after{
+      content: "";
+      width: 10px;
+      height: 10px;
+      background: green;
+      position: absolute;
+      left: 3%;
+      top: 100%;
+      transform: rotate(45deg) translate(0, -100%);
+    }
+  }
+}
+
+.anim{
+  animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+  50%{
+    transform: scale(1.4) rotateY(180deg);
+  }
+  100% {
+    transform: scale(1.0) rotateY(180deg);
+  }
+}
+
+@keyframes rotate-number {
+  50%{
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1.0) ;
+  }
+}
+
+@media (max-width: 1000px) {
+  .form-summary {
+    & .fa-phone-square{
+      right: 8%;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .form-summary {
+  width: 40%;
+  }
+}
+
+@media (max-width: 650px) {
+  .form-summary {
+    width: 80%;
+    margin-top: 30px;
+  }
+  .select{
+    width: 100%;
+    &__input{
+      width: 90%;
+    }
+  }
+}

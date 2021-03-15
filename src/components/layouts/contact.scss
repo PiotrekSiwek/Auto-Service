@@ -1,0 +1,38 @@
+.contact{
+  padding-top: 60px;
+  border: 1px solid transparent;
+  padding-bottom: 65px;
+
+  &__title{
+    color: #ffffff;
+    text-align: center;
+    font-size: 30px;
+  }
+  &__box{
+   display: flex;
+  }
+}
+
+@media (min-width: 1400px) {
+  .contact{
+    min-height: 840px;
+
+    &__title{
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
+  }
+}
+
+@media (max-width:680px) {
+  .contact{
+    &__box{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &__title{
+      margin-top:15px;
+    }
+  }
+}
